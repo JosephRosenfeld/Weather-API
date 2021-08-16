@@ -1,0 +1,268 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #a88bc1;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3vh 0;
+  padding: 2vh 2vw;
+  text-align: right;
+  background-color: #6e3f98;
+  color: white;
+}
+
+#header-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#search-bar {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+#search-bar-instructions {
+  margin-right: .75rem;
+  font-size: 1.2em;
+}
+
+input {
+  margin: .5em;
+  font-size: 1rem;
+}
+
+button {
+  margin: .5em;
+  background-color: #a88bc1;
+  color: white;
+  padding: .5em 1em;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+/*Removes the up and down arrow on number inputs*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-container{
+  margin: 10px;
+  width: 80vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6e3f98;
+  box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+  border-radius: 15px;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.cur-weather-container {
+  margin: 10px;
+  width: 80vw;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6e3f98;
+  box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+  border-radius: 15px;
+  color: white;
+  font-size: 3rem;
+  text-align: left;
+  padding: 10px;
+}
+
+.cur-left {
+  margin: 20px 0;
+  margin-left: 5vw;
+}
+
+.cur-location {
+  font-size: 2rem;
+}
+
+.cur-time {
+  margin: 5px;
+  font-size: 1rem;
+  opacity: .5;
+}
+
+.cur-temp {
+  font-size: 6rem;
+}
+
+.cur-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 2rem;
+  margin-right: 10vw;
+  text-align: center;
+}
+
+.cur-icon img{
+  width: 7vw;
+}
+
+.forecast-container {
+  display: none;
+  margin: 10px;
+  padding: 10px; 
+  width: 80vw;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6e3f98;
+  box-shadow: 0 0 12px 0 rgba(0,0,0,.2);
+  border-radius: 15px;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#forecast-title {
+  margin: 20px 0;
+  font-size: 1.25em;
+}
+
+.forecast-days-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: auto;
+  align-items: flex-start;
+  column-gap: 10px;
+  row-gap: 40px;
+  margin: 10px 0;
+}
+
+.forecast-day {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.forecast-date {
+  font-size: .5em;
+  margin-bottom: 10%;
+}
+
+.forecast-text {
+  font-size: .4em;
+  margin-top: 10%;
+}
+
+
+@media (max-width: 1124px) {
+  .forecast-container {
+    font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .cur-temp {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 810px) {
+  .forecast-days-container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+  }
+
+  #day1 {
+    grid-column: 1 / 4;
+  }
+
+  #day2 {
+    grid-column: 4 / 7;
+  }
+
+  #day3 {
+    grid-column: 7 / 10;
+  }
+
+  #day4 {
+    grid-column: 10 / 13;
+  }
+
+  #day5 {
+    grid-column: 1 / 5;
+  }
+
+  #day6 {
+    grid-column: 5 / 9;
+  }
+
+  #day7 {
+    grid-column: 9 / 13;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+  #search-bar {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  input {
+    margin-bottom: 2px;
+    text-align: center;
+  }
+
+  button {
+    margin-top: 2px;
+  }
+
+  .cur-weather-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cur-left, .cur-right {
+    margin: 10px 0;
+  }
+}
