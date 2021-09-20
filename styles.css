@@ -129,7 +129,7 @@ input[type=number] {
 }
 
 .cur-icon img{
-  width: 7vw;
+  width: 100px;
 }
 
 .forecast-container {
