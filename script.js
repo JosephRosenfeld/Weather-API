@@ -1,6 +1,6 @@
 const API_KEY = 'b2cbc3e59710481a972235556202412';
 const form = document.querySelector('form');
-const API_BASE_URL = 'http://api.weatherapi.com/v1';
+const API_BASE_URL = 'https://api.weatherapi.com/v1';
 const CUR_METHOD = '/current.json';
 const FORECAST_METHOD = '/forecast.json';
 const days = 7;
