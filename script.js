@@ -40,7 +40,7 @@ form.addEventListener('submit', function(e) {
       forecastContainer.style.display = "none";
       errorContainer.style.display = "flex";
       errorText.innerHTML = "Invalid Zip Code";
-      //Add in the shiz for if its a new zip code after ones already been typed in
+      //Add in the stuff for if its a new zip code after ones already been typed in
     });
 });
 
